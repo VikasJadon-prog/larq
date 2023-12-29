@@ -1,0 +1,125 @@
+.sec {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    width: 33%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+  
+  .card {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+  }
+  
+  .proMedia {
+    border-radius: 10px;
+    align-self: flex-start;
+    width: 100%;
+  }
+  
+  .proMedia img {
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .shopCard-content {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+    margin: 10px;
+  }
+  
+  .productTitle {
+    padding: 0px;
+    margin: 5px;
+
+  }
+  
+  .productTitle h3 {
+    color: rgb(21, 58, 91);
+    line-height: 1.2;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-weight: 700;
+    font-size: clamp(1.06667rem, 1.06667rem + 0.268097vw - 1.14745px, 1.33333rem);
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .productTitle span {
+    color: rgb(21, 58, 91);
+    line-height: 1.7;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .prodSwiper {
+    /* padding:0% 30%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+  }
+  
+  .productList {
+    width: 64px;
+    flex: 0 0 64px;
+    padding: 0px;
+  
+  }
+  
+  .productList button {
+    width: 100%;
+    padding: 0px;
+    border-color: transparent;
+    background-color: transparent;
+    transition: all .4s ease-in-out 0s;
+  }
+  
+  .productList button:focus {
+    border: 1px solid grey;
+    border-radius: 7px;
+  }
+  
+  .productList img {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  .prodPrice {
+    margin: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @media screen and (min-width:992px) {
+    .slider{
+      display: none;
+    }
+  };
+  @media screen and (min-width:991px) {
+    .prodSwiper {
+      display: none;
+    }
+  };
+  
+  

@@ -1,0 +1,253 @@
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/images/backGround.png");
+    background-color: red;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    height: 90%;
+    background-color: transparent;
+}
+
+.wrapper {
+    display: flex;
+    grid-template-columns: auto auto;
+    height: 95%;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(21, 58, 91, 0) 0%, rgba(21, 58, 91, 0) 33.33%, rgba(21, 58, 91, 0.1) 66.67%, rgba(21, 58, 91, 0.8) 100%);
+}
+
+.article-contain {
+    width: 55%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.article-contain article {
+    width: 100%;
+    display: inline;
+
+}
+
+.title {
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+    transition: 0.8s ease-in-out;
+    font-weight: 400;
+}
+
+.heading {
+    margin-top: 40px;
+    color: #ffffff;
+    font-size: 70px;
+    font-weight: 800;
+    line-height: 20px;
+    letter-spacing: 1px;
+    transition: 0.8s ease-in-out;
+    z-index: 1;
+    position: relative;
+}
+
+.description {
+    margin-top: 70px;
+    width: 90%;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    transition: 0.8s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+.learnbut {
+    margin-top: 40px;
+}
+
+.learnbut button {
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 0.3rem 1.33rem;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 75px;
+    font-weight: bold;
+    font-size: clamp(0.938rem, 1.152rem + -0.952vw, 0.688rem);
+    line-height: 1;
+    letter-spacing: 0;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    border: 0;
+    width: fit-content;
+    gap: 10px;
+    transition: 0.5s ease-in-out;
+    backface-visibility: hidden;
+    outline: 1px solid transparent;
+    z-index: 9;
+
+}
+
+.learnbut button:hover {
+    transform: scale(1.03);
+    color: #153a5b;
+}
+
+.learnbut button span {
+    color: #153a5b;
+}
+
+.sliderDiv {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: none;
+    right: 0;
+    top: 0;
+}
+
+.slide {
+    background-color: transparent;
+    margin-right: -80%;
+    height: 100%;
+    width: 90%;
+    cursor: pointer;
+    z-index: 1;
+    overflow: none;
+    display: flex;
+    gap: 7em;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .slide::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(21, 58, 91, 0) 0%, rgba(21, 58, 91, 0) 33.33%, rgba(21, 58, 91, 0.1) 66.67%, rgba(21, 58, 91, 0.8) 100%);
+
+} */
+.slide:hover {
+   
+    margin-right: -50%;
+}
+
+.slide h1 {
+    color: whitesmoke;
+}
+
+.card {
+    background-color: aqua;
+    height: 500px;
+    width: 375px;
+    border-radius: 10px;
+}
+
+.container-card {
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/images/cardImg1.png');
+    border-radius: 10px;
+    display: flex;
+    align-items: end;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 5% 10%;
+    background-size: cover;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.container-card h3 {
+    transition: 0.5s ease-in-out;
+    font-size: 1.33333rem;
+    line-height: 2.13333rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.card-des {
+    transition: all 0.5s ease-in-out 0s;
+    letter-spacing: 0.02em;
+    font-size: 1.06667rem;
+    line-height: 1.6rem;
+    color: rgb(255, 255, 255)
+}
+
+.cardbut {
+    margin-top: 35px;
+    }
+
+.cardbut button {
+    margin-bottom: -57px;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 0.2rem .5rem;
+    border-style: solid;
+    border-radius: 75px;
+    font-weight: bold;
+    font-size: clamp(0.938rem, 1.152rem + -0.952vw, 0.688rem);
+    line-height: 1;
+    letter-spacing: 0;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    border: 0;
+    width: fit-content;
+    gap: 5px;
+    transition: 0.5s ease-in-out;
+    backface-visibility: hidden;
+    outline: 1px solid transparent;
+    z-index: 2;
+    overflow: hidden;
+}
+.cardbut button:hover {
+    transform: scale(1.03);
+    color: #153a5b;
+}
+.card:hover .cardbut button{
+    margin-bottom: 0px;
+}
+.card:hover .cardbut {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+/* .card-article::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(rgba(21, 58, 91, 0) 0%, rgba(21, 58, 91, 0) 33.33%, rgba(21, 58, 91, 0.1) 66.67%, rgba(21, 58, 91, 0.8) 100%);
+    border-radius: 0.66667rem;
+} */
