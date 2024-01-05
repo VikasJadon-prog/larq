@@ -4,6 +4,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import cardImg1 from '../assets/images/cardImg1.png';
 import cardImg2 from '../assets/images/cardImg2.png';
 import cardImg3 from '../assets/images/cardImg3.png';
+import Card from '../component/Card';
 const Page = () => {
     const data = [
         {
@@ -29,8 +30,9 @@ const Page = () => {
         }
     ]
     return (
+    <>
         <div className='container-fluid'>
-            <div className='container'>
+            <div className='container-page'>
                 <div className='wrapper '>
                     <div className='article-contain'>
                         <article >
@@ -54,16 +56,14 @@ const Page = () => {
                         <div className='slide'>
                             
                               {
-                                data.map(()=>(
-                                    <div className='card'>
-                                    <div className='container-card'>
+                                data.map((data)=>(
+                                    <div className='card-page'>
+                                    <div className='container-card' style={{ backgroundImage: `url(${data.backGroundImg})` }}>
                                     <article>
                                     <div className='card-article'>
-                                        <h3>
-                                        Award winning design
-                                        </h3>
+                                        <h3>{data.heading}</h3>
                                         <div className='card-des'>   
-                                        When it comes to form and function, we’ve got it down.
+                                        {data.description}
                                         </div>
                                         <div className='cardbut'>
                                 <button >
@@ -82,6 +82,7 @@ const Page = () => {
                 </div>
             </div>
         </div>
+        <Card/></>
 
     )
 }

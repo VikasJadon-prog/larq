@@ -1,18 +1,20 @@
 .container-fluid {
+    /* margin-top: 15%; */
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100%;
+    height: 90%;
     background-image: url("../assets/images/backGround.png");
-    background-color: red;
     background-size: cover;
     overflow: hidden;
+   
 }
 
-.container {
+.container-page {
     width: 90%;
     height: 90%;
     background-color: transparent;
@@ -24,13 +26,12 @@
     height: 95%;
 }
 
-.container::after {
+.container-fluid::after {
     content: '';
     position: absolute;
-    top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height:100%;
     background: linear-gradient(180deg, rgba(21, 58, 91, 0) 0%, rgba(21, 58, 91, 0) 33.33%, rgba(21, 58, 91, 0.1) 66.67%, rgba(21, 58, 91, 0.8) 100%);
 }
 
@@ -105,7 +106,7 @@
     transition: 0.5s ease-in-out;
     backface-visibility: hidden;
     outline: 1px solid transparent;
-    z-index: 9;
+    z-index: 1;
 
 }
 
@@ -119,7 +120,7 @@
 }
 
 .sliderDiv {
-    width: 50%;
+    width: 65%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,14 +131,14 @@
 
 .slide {
     background-color: transparent;
-    margin-right: -80%;
+    margin-right: -79%;
     height: 100%;
-    width: 90%;
+    width: 100%;
     cursor: pointer;
     z-index: 1;
     overflow: none;
     display: flex;
-    gap: 7em;
+    gap: 6em;
     justify-content: center;
     align-items: center;
 }
@@ -145,7 +146,7 @@
 /* .slide::after{
     content: '';
     position: absolute;
-    top: 0;
+    top: 0; 
     left: 0;
     width: 100%;
     height: 100%;
@@ -154,17 +155,17 @@
 } */
 .slide:hover {
    
-    margin-right: -50%;
+    margin-right: -45%;
 }
 
 .slide h1 {
     color: whitesmoke;
 }
 
-.card {
+.card-page {
     background-color: aqua;
     height: 500px;
-    width: 375px;
+    width: 500px;
     border-radius: 10px;
 }
 
@@ -180,7 +181,7 @@
     padding: 5% 10%;
     background-size: cover;
     overflow: hidden;
-    z-index: 1;
+  
 }
 
 .container-card h3 {
@@ -234,10 +235,10 @@
     transform: scale(1.03);
     color: #153a5b;
 }
-.card:hover .cardbut button{
+.card-page:hover .cardbut button{
     margin-bottom: 0px;
 }
-.card:hover .cardbut {
+.card-page:hover .cardbut {
     margin-top: 15px;
     margin-bottom: 30px;
 }
