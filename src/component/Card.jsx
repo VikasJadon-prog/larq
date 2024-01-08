@@ -1,21 +1,17 @@
-import React from 'react'
-// import  { useState } from 'react'; sd
+import React, { useEffect, useState } from 'react'
 import "slick-carousel/slick/slick.css";
-import data from '../data.json'
+import data from '../data';
 import "slick-carousel/slick/slick-theme.css";
-// import bottle2 from '../assets/images/bottle2.png';
-// import bottle3 from '../assets/images/bottle3.png';
-// import bottle4 from '../assets/images/bottle4.png';
-// import bottle5 from '../assets/images/bottle5.png';
 import '../component/CardCss.css';
-import { Link } from 'react-router-dom';
 const Card = () => {
-  // const [product,setProduct]=useState({
-  //     img:bottle1,
-  //     backGroundColor: `#f7f7f7`,
-  //     prodName:`Black / Onyx`,
-  //     price:`89`
-  //   },)
+  const [selected, setSelected] = useState(data[0])
+  // const setBottle =(item)=>{
+  //  setSelected({...data,img:item.img,backGroundColor:item.backGroundColor,prodName:item.prodName,price:item.price})
+  //  console.log(product)
+  // }
+  const setBottle = (item) => {
+    setSelected(selected[item])
+  }
   //   const slideItem = [
   //     { 
   //       id: "1",
@@ -54,7 +50,7 @@ const Card = () => {
   //       price:`99`
   //     }
   //   ]
-  // const selBottle =(item)=>{
+  // const setBottle =(item)=>{
   //  setProduct({...product,img:item.img,backGroundColor:item.backGroundColor,prodName:item.prodName,price:item.price})
   //  console.log(product)
   // }
@@ -70,29 +66,28 @@ const Card = () => {
       <div className='container'>
         {data.map((product) => {
           return (
-            <div className='card' key={product.id} style={{ backgroundColor: product.backGroundColor }}>
+            <div className='card' key={product.id} >
               <div className='proMedia'>
-              <img src={product.image} alt='bottle1'/>
+                <img src={require(`../assets/images/${selected.subImg[0].img}`)} alt='bottle1' />
               </div>
               <div className='shopCard-content'>
                 <div className='productTitle '>
                   <div className=' d-flex center'>
-                    <h3 >LARQ Bottle Movement PureVis™</h3>
-                    <span >{product.prodName}</span>
+                    <h3 >{selected.subImg[0].prodName}</h3>
+                    <span >{selected.subImg[0].prodCol}</span>
                   </div>
                 </div>
-                {/* <div className='prodSwiper'>
-               {data.map((item) => (
-                 <div className='productList' key={item.id}>
-                   <button onClick=
-                     {() =>selBottle(item)}>
-                     <img src={item.img} alt={`bottle${item.id}`} />
-                   </button>
-                 </div>
-               ))}
-             </div> */}
+                <div className='prodSwiper'>
+                  {product.subImg.map((item) => (
+                    <div className='productList' key={item.id}>
+                      <button onClick={setBottle(data[item])} >
+                        <img src={require(`../assets/images/${item.img}`)} />
+                      </button>
+                    </div>
+                  ))}
+                </div>
                 <div className='prodPrice'>
-                  <span>From ${product.price}</span>
+                  <span>From ${selected.subImg[0].price}</span>
                 </div>
               </div>
             </div>
@@ -102,5 +97,4 @@ const Card = () => {
     </section>
   )
 }
-
 export default Card;

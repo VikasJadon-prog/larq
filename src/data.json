@@ -1,9 +1,24 @@
 [
+  
   {
-    "id": "1",
-    "image":"public/logo512.png",
-    "backGroundColor": "#f7f7f7",
-    "prodName": "Black / Onyx",
-    "price": "89"
+    "id":"1",
+    "subImg": [
+      {
+        "id": " 11",
+        "img": "bottle11.png",
+        "prodName":"LARQ Bottle PureVis™",
+        "bgColor": "#f7f7f7",
+        "prodCol": "Black / Onyx",
+        "price": "89"
+      },
+      {
+        "id": "12",
+        "img": "bottle12.png",
+        "prodName":"LARQ Bottle PureVis™",
+        "bgColor": "#f7f7f7",
+        "prodCol": "Black / Onyx",
+        "price": "89"
+      }
+    ]
   }
 ]
